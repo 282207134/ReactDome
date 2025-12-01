@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f5f5;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.app-header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+.section {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #667eea;
+}
+
+.section h3 {
+  color: #555;
+  margin: 15px 0 10px 0;
+}
+
+button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.counter-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+  min-width: 50px;
+  text-align: center;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin: 8px 0;
+  background: #f9f9f9;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.todo-text {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.user-card {
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.user-card h4 {
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.theme-toggle {
+  margin: 15px 0;
+}
+
+.dark-theme {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.dark-theme .section {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.dark-theme .todo-item,
+.dark-theme .user-card {
+  background: #3a3a3a;
+  border-color: #4a4a4a;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #667eea;
+  font-size: 18px;
+}
+
+.error {
+  color: #e74c3c;
+  padding: 15px;
+  background: #fee;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.timer {
+  font-size: 48px;
+  font-weight: bold;
+  color: #667eea;
+  text-align: center;
+  padding: 20px;
+  background: #f0f0ff;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.form-group {
+  margin: 15px 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 500;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tab {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #667eea;
+  transform: none;
+}
+
+.tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+  font-weight: bold;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal h3 {
+  margin-top: 0;
+  color: #667eea;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
